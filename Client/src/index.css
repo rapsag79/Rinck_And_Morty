@@ -5,14 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: auto;
+  /* background-size: auto; */
+  /* background-attachment: fixed ; */
+  /* background-repeat:no repeat; */
   background-image: url(https://storage.googleapis.com/pai-images/fd103e81f5154456af0dd191b8e412c9.jpeg);
-
-  /* background-size: cover; */
-  /* background-repeat: no-repeat; */
+  background-size:cover;
+  background-repeat: no-repeat;
   /* background-color: rgba(0, 0, 0, 0.859); */
   /* background-repeat: repeat; */
-  /* background-attachment: inherit; */
+  background-position:initial ;
+  background-attachment: fixed;
 }
 
 /* code {

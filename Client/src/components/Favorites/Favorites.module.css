@@ -23,6 +23,65 @@
 /* .nav { */
 /* } */
 
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+} */
+
+/* .nav {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+} */
+
+/* .select-container { */
+  /* display: flex;
+  align-items: center;
+  margin-left: auto; */
+    /* margin-top: 5rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+} */
+
+/* .select-container select {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  background-color: lime;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.select-container select:hover {
+  color: rgb(223, 219, 34);
+}
+
+.select-container select:focus {
+  outline: none;
+  border-bottom: 2px solid lime;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+@media(max-width: 768px){
+
+} */
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -37,8 +96,33 @@
   margin-bottom: 20px;
 }
 
-.select {
-  margin: 0 10px;
+.select-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.select-container select {
+  padding: 0.5rem;
+  margin-left: 1rem;
+  background-color: lime;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.select-container select:hover {
+  color: rgb(223, 219, 34);
+}
+
+.select-container select:focus {
+  outline: none;
+  border-bottom: 2px solid lime;
 }
 
 .grid {
@@ -47,4 +131,11 @@
   gap: 20px;
   justify-items: center;
   align-items: center;
+}
+
+@media(max-width: 768px) {
+
+  .select-container {
+    margin-top: 10rem;
+  }
 }

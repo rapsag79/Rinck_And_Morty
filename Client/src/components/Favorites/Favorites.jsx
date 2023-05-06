@@ -51,20 +51,20 @@ const Favorites = ({ myFavorites }) => {
 
   return (
     <div className={styles.container}>
-      <nav className={styles.nav}>
-        <select className={styles.select} onChange={handleOrder}>
-          <option value="A">Ascendente</option>
-          <option value="D">Descendente</option>
-        </select>
+  <div className={styles["select-container"]}>
+  <select onChange={handleOrder}>
+    <option value="A">Ascendente</option>
+    <option value="D">Descendente</option>
+  </select>
 
-        <select className={styles.select} onChange={handleFilter}>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Genderless">Genderless</option>
-          <option value="unknown">unknown</option>
-          <option value="allCharacters">All Characters</option>
-        </select>
-      </nav>
+  <select onChange={handleFilter}>
+    <option value="allCharacters">All Characters</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Genderless">Genderless</option>
+    <option value="unknown">unknown</option>
+  </select>
+</div>
       <div className={styles.grid}>
         {myFavorites?.map((fav) => {
           return (

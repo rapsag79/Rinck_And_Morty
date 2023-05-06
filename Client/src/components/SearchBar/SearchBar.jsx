@@ -19,7 +19,7 @@ export default function SearchBar({ onSearch }) {
       />
       <button
         className={styles["searchButton"]}
-        activeClassName={styles.active}
+        activeclassname={styles.active}
         onClick={() => {
           onSearch(id);
           setId("");

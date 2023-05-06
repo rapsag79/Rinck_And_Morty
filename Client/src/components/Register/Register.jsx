@@ -1,13 +1,14 @@
-import styles from "./Form.module.css";
-import { useState } from "react";
+import styles from "./Register.module.css";
 import validation from "../Validation/validation";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-// import Register from "./components/Register/Register";
 
-const Form = ({ login }) => {
+const Register = ({register}) => {
   const [errors, setErrors] = useState({});
 
   const [inputs, setInputs] = useState({
+    name: "",
+    nameUser: "",
     email: "",
     password: "",
   });
@@ -35,18 +36,40 @@ const Form = ({ login }) => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    login(inputs);
+    register(inputs);
   }
 
   return (
     <div className={styles["form-container"]}>
       <form className={styles["rick-morty-form"]} onSubmit={handleSubmit}>
-        <h1>Welcome</h1>
+        <h1>welcome register</h1>
         <img
           src="https://storage.googleapis.com/pai-images/9bab556bc1574fce9e72b39aa2e9cfe1.jpeg"
           alt="Rick_And_Morty"
           className={styles.image}
         />
+
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            name="name"
+            value={inputs.name}
+            type="text"
+            placeholder="ingrese su Name"
+            onChange={handleChange}
+          />
+        </div>
+{/* 
+        <div>
+          <label htmlFor="user_name">Username</label>
+          <input
+            name="user_name"
+            value={inputs.nameUser}
+            type="text"
+            placeholder="ingrese su Username"
+            onChange={handleChange}
+          />
+        </div> */}
 
         <div>
           <label htmlFor="email">Email</label>
@@ -76,13 +99,18 @@ const Form = ({ login }) => {
           {errors.password && <p style={{ color: "red" }}>{errors.password}</p>}
         </div>
 
-        <button className={styles.button}>Submit</button>
-        {/* <button className={styles.button}>
-          <NavLink to={"/register "}>Register</NavLink>
-        </button> */}
+        <button className={styles.button}><NavLink to={"/"}>
+          Create User
+        </NavLink>
+        </button>
+        or 
+        <button className={styles.button}><NavLink to={"/"}>
+          Log In
+        </NavLink>
+        </button>
       </form>
     </div>
   );
 };
 
-export default Form;
+export default Register;

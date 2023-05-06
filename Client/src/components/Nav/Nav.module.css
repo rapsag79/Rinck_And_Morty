@@ -1,13 +1,14 @@
 .nav-container {
   background-color: #8ae6b8;
   display: flex;
+      min-height: 70px;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  position: fixed;
-  top: 9px;
-  left: 0;
-  width: 100%;
+  /* position: fixed;
+  top: 0rem; */
+  /* left: 0; */ 
+  width: 98%;
 }
 
 .nav-link {
@@ -16,6 +17,7 @@
   font-weight: bold;
   margin: 0 1rem;
   transition: all 0.2s ease-in-out;
+
 }
 
 .nav-link:hover {
@@ -27,10 +29,14 @@
 }
 @media (max-width: 768px) {
   .nav-container {
+      display: inherit;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding: 1rem 0;
+    background-color: #8ae6b8;
+    background:transparent;
+    background-size: auto;
   }
 
   .nav-link {

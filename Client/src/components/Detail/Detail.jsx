@@ -1,6 +1,6 @@
 import axios from "axios";
 import styles from "./Detail.module.css";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 // const URL_BASE = "https://be-a-rym.up.railway.app/api/character";
@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 
 const Detail = ({ onClose }) => {
   const { id } = useParams();
+
+  const navigate = useNavigate()
 
   const [character, setCharacter] = useState({});
 
@@ -50,14 +52,12 @@ const Detail = ({ onClose }) => {
           <h2 className={`styles.origin ${styles.hidden}`}>
             Origin: {character.origin?.name}
           </h2>
-          <NavLink to={`/home`}>
-            <button
-              className={`${styles.closeButton} closeButton`}
-              onClose={() => onClose()}
-            >
-              Back
-            </button>
-          </NavLink>
+          <button
+            className={`${styles.closeButton} closeButton`}
+            onClick={() => navigate(-1)} // retrocede en la historia del navegador
+          >
+            Back
+          </button >
         </div>
       )}
     </div>
